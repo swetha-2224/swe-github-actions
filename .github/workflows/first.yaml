@@ -8,3 +8,5 @@ jobs:
     steps:
       - name: executing the script
         run: echo "executed"
+      - name: listing the files
+        run: ls
