@@ -9,8 +9,8 @@ jobs:
         uses: actions/checkout@v4
       - name: executing the script
         run: |
-          chmod +x /workspaces/swe-github-actions/.github/first.sh   
-          /workspaces/swe-github-actions/.github/first.sh
+          chmod +x .github/first.sh   
+          .github/first.sh
      #   run: |
    #      echo " my sec job"
     #       ls -lrta
