@@ -10,7 +10,7 @@ jobs:
       - name: list and read files
         run: |
            echo " my sec job"
-           ls - lrta
+           ls -lrta
            cat README.md
       - name: install cowsay program
         run: sudo apt-get install cowsay -y
