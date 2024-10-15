@@ -15,6 +15,6 @@ jobs:
       - name: install cowsay program
         run: sudo apt-get install cowsay -y
       - name: Generate ascii artwork
-        run: cowsay -f dragon "RUN for cover, I am a DRAGON " >> dragon.txt
+        run: cowsay -f lion "RUN for cover, I am a LION " >> lion.txt
       - name: read the file
         run: cat dragon.txt
