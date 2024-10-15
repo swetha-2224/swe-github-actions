@@ -7,14 +7,20 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v4
-      - name: list and read files
+      - name: executing the script
         run: |
-           echo " my sec job"
-           ls -lrta
-           cat README.md
-      - name: install cowsay program
-        run: sudo apt-get install cowsay -y
-      - name: Generate ascii artwork
-        run: cowsay -f dragon "RUN for cover, I am a LION " >> dragon.txt
-      - name: read the file
-        run: cat dragon.txt
+          chmod +x first.sh   
+          sh first.sh
+     #   run: |
+   #      echo " my sec job"
+    #       ls -lrta
+     #      cat README.md
+      #- name: install cowsay program
+      #  run: sudo apt-get install cowsay -y
+     # - name: Generate ascii artwork
+      #  run: cowsay -f dragon "RUN for cover, I am a LION " >> dragon.txt
+     # - name: read the file
+      #  run: cat dragon.txt 
+
+         
+
