@@ -9,6 +9,9 @@ jobs:
       - name: executing the script
         run: echo "executed"
 
+      - name: checkout
+        uses: actions/checkout@v4  
+
       - name: listing the files
         run: ls 
 
