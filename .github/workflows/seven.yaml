@@ -11,6 +11,9 @@ jobs:
         exclude: 
           - images: alpine
             os: windows-latest
+        include:
+          - images: busy-box
+            os: ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps:
       - name: docker login
