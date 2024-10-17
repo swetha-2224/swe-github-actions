@@ -1,0 +1,14 @@
+name: cronjob
+on:
+  schedule:
+  - cron '*/1 * * * *'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: doing cron job
+        run: echo haaktin pradeepa
+     #   run: '*/1 * * * *'
+  
+  
