@@ -1,18 +1,23 @@
 name: filter and activities
 on:
-  #workflow_dispatch:
-  push:
-    # branches:
-    # - 'main' 
-    # - '!feature/*'
-    branches-ignore:
-      - 'main'
-      - 'main/*'
-    
-
+    workflow_dispatch:
+    push:
+      branches:
+        - main
+        - '!feature/branch1*'
+  
+    pull_request:
+      types:
+        - opened
+        - closed
+      paths-ignore:
+        - README.md
+      branches:
+        - main
+      
 jobs:
-  docker:
-    runs-on: ubuntu-latest
-    steps:
-      - name: docker info
-        run: echo docker info
+  job1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Namaste swetha Gowda
+          run: echo "Good afternoon"
