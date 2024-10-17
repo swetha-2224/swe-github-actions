@@ -15,8 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: working on concurrency
-        run: |
-          echo concurrrr
-          sleep 120
+        run: echo concurrrr
+          
   
   
