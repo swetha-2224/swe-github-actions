@@ -12,6 +12,7 @@ jobs:
   
   deploy:
     needs: docker
+    timeout-in-minutes: 1
     concurrency: 
       group: good
       cancel-in-progress: false
