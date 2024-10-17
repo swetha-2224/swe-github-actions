@@ -1,0 +1,20 @@
+name: matrix-stratergy
+on:
+  push
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker login
+        run: docker info
+      - name: run the docker images
+        run: docker run hello-world
+
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - name: docker login
+        run:  docker info
+      - name: run the docker images
+        run: docker run hello-world
