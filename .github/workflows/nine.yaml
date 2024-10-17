@@ -1,6 +1,6 @@
 name: conditional exp
 on:
-  workflow_dispatch
+  push
   
 jobs:
   docker:
@@ -15,7 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: working on concurrency
-        run: echo concurrrr
+        run: |
+          echo concurrrr
+          echo hi
           
   
   

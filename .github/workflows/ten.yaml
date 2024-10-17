@@ -1,0 +1,14 @@
+name: filter and activities
+on:
+  #workflow_dispatch:
+  push:
+    branches:
+    - 'main' 
+    - '!feature/*'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker info
+        run: echo docker info
