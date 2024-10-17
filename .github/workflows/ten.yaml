@@ -2,12 +2,20 @@ name: filter and activities
 on:
   #workflow_dispatch:
   push:
-    # branches:
-    # - 'main' 
-    # - '!feature/*'
-    branches-ignore:
-      - 'main'
-      - 'main/*'
+    branches:
+    - 'main' 
+    - '!feature/*'
+    # branches-ignore:
+    #   - 'main'
+    #   - 'main/*'
+  pull_request:
+    types:
+      - opened
+      - closed
+    path-ignore:
+      - README.md
+    branches:
+      - main
     
 
 jobs:
