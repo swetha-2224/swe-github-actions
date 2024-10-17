@@ -1,6 +1,6 @@
 name: conditional exp
 on:
-  workflow_dispatch
+  push
   
 jobs:
   docker:
