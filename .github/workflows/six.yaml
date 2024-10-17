@@ -1,0 +1,25 @@
+name: concurrency
+on:
+  workflow_dispatch
+  
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: doing cron job
+        run: echo haaktin pradeepa
+
+  
+  deploy:
+    needs: docker
+    concurrency: 
+      group: good
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: working on concurrency
+        run: |
+          echo concurrrr
+          sleep 120
+  
+  
