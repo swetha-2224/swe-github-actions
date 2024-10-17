@@ -2,9 +2,13 @@ name: filter and activities
 on:
   #workflow_dispatch:
   push:
-    branches:
-    - 'main' 
-    - '!feature/*'
+    # branches:
+    # - 'main' 
+    # - '!feature/*'
+    branches-ignore:
+      - 'main'
+      - 'main/*'
+    
 
 jobs:
   docker:
