@@ -1,23 +1,23 @@
 name: filter and activities
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-      - '!feature/*'
+    workflow_dispatch:
+    push:
+      branches:
+        - main
+        - '!feature/branch1/*'
   
-  pull_request:
-    types:
-      - opened
-      - closed
-    paths-ignore:
-      - README.md
-    branches:
+    pull_request:
+      types:
+        - opened
+        - closed
+      paths-ignore:
+        - README.md
+      branches:
         - main
       
 jobs:
   job1:
       runs-on: ubuntu-latest
       steps:
-        - name: Namaste swethagowda
+        - name: Namaste swetha Gowda
           run: echo "Good afternoon"
